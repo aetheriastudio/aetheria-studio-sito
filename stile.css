@@ -115,7 +115,7 @@ nav a:hover {
    3. HERO SECTION (HOME) & ANIMAZIONE TYPING
    ========================================================================== */
 .hero {
-    padding-top: 150px;
+    padding-top: 130px;
     padding-bottom: 70px;
     position: relative;
 }
@@ -128,10 +128,10 @@ nav a:hover {
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    align-items: center;
+    display: flex; /* Cambiato da grid a flex */
+    flex-direction: column; /* Dispone gli elementi in verticale */
+    align-items: flex-start; /* Allinea tutto a sinistra */
+    gap: 30px; /* Spazio tra il titolo e la CTA */
 }
 
 .hero-text h1 {
@@ -149,18 +149,18 @@ nav a:hover {
 }
 
 .hero-cta {
-    text-align: right;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start; /* Forza l'allineamento a sinistra */
     gap: 20px;
 }
 
 .cta-box h2 {
-    font-size: 50px;
+    font-size: 30px;
     line-height: 1.1;
-    font-weight: 600;
-    letter-spacing: -2px;
+    font-weight: 400;
+    letter-spacing: 0;
     padding-bottom: 10px;
 }
 
@@ -283,15 +283,13 @@ nav a:hover {
 }
 
 .cta-box {
-    max-width: 420px;
     width: 100%;
     background-color: #ECECE5;
     color: #06141B;
-    margin-top: 36px;
-    text-align: right;
+    text-align: left; /* Cambiato da right a left */
     transition: opacity 0.6s ease, transform 0.6s ease;
     will-change: opacity, transform;
-    margin-left: auto;
+    margin-left: 0; /* Cambiato da auto a 0 */
 }
 
 .tag {
@@ -416,7 +414,6 @@ nav a:hover {
 .about-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 80px;
     margin-top: 60px;
 }
 
@@ -794,8 +791,7 @@ footer {
     }
     
     .hero-content { 
-        grid-template-columns: 1fr; 
-        gap: 40px; 
+        grid-template-columns: 1fr;
     }
     
     /* Il bottone rimane a destra */
@@ -808,7 +804,7 @@ footer {
     }
     
     .cta-box h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
     
     /* Fix work-grid per mobile - single column */
@@ -855,6 +851,14 @@ footer {
         padding-top: 60px;
         padding-bottom: 40px;
     }
+
+    .hero-content { 
+        gap: 20px;
+    }
+
+    .hero-cta {
+        gap: 5px;
+    }
     
     /* Il bottone rimane a destra anche su smartphone */
     
@@ -864,13 +868,12 @@ footer {
     }
     
     .cta-box h2 {
-        font-size: 32px;
-        letter-spacing: -1px;
+        font-size: 22px;
     }
     
     .cta-button {
-        font-size: 18px;
-        padding: 14px 36px;
+        font-size: 15px;
+        padding: 12px 28px;
     }
     
     .footer-content { grid-template-columns: 1fr;
@@ -883,6 +886,34 @@ footer {
 
     .logo-img-footer {
         height: 50px;
+    }
+
+    .single-project-hero h1 {
+        font-size: 42px;
+    }
+
+    .project-content {
+        padding: 0 0;
+    }
+    
+    .project-content p {
+        margin-bottom: 40px;
+    }
+
+    .project-images-magazine {
+        column-count: 1;
+    }
+    
+     .project-images-magazine .project-image {
+        margin-bottom: 40px;
+    }
+
+    .project-images-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fade-in-up {
+        line-height: 1.1;
     }
 }
 
